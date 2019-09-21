@@ -1,6 +1,13 @@
 fileFormatVersion: 2
+guid: 806ce9e86f4c1bd41afbd73483e9da08
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8707830304444028814
+    second: playerN_0
+  - first:
+      213: -5672562980097463702
+    second: playerN_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -39,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,13 +75,66 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: playerN_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 21
+        width: 61
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56f905d7eb703a4e8c49793651495d7
+      internalID: 8707830304444028814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerN_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 20
+        width: 61
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d460d35946b569a4bbd01033a87f1de7
+      internalID: -5672562980097463702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f96a2d020ed55bb40bb8b39f5eff6194
+    spriteID: d47532219628e2049bd4a8266a1e7ad5
     internalID: 0
     vertices: []
     indices: 
