@@ -6,10 +6,10 @@ public class Playermovement : MonoBehaviour
 {
     [SerializeField] float _speed = 5f;
 
-    private Vector2 _prevpos;
+    private Vector2 _prevPos;
     private Vector2 _velocity;
     public Vector2 Velocity => _velocity;
-
+    public Vector2 Direction { get; private set; }
 
     void Update()
     {
@@ -21,8 +21,10 @@ public class Playermovement : MonoBehaviour
             _speed * vert * Time.deltaTime
         );
 
-        _prevpos = transform.position;
+        _prevPos = transform.position;
         transform.position = newPos;
-        _velocity = (newPos - _prevpos) / Time.deltaTime;
+        _velocity = (newPos - _prevPos) / Time.deltaTime;
+
+        if (_velocity.magnitude > float.Epsilon) Direction = _velocity.normalized;
     }
 }

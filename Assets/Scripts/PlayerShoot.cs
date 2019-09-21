@@ -18,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
         float fire = Input.GetAxis("Fire1");
         if(fire > float.Epsilon)
         {
-            if (_bullet != null) Instantiate(_bullet, transform.position, Quaternion.LookRotation(Vector3.forward ,_pm.Velocity));
+            if (_bullet != null) Instantiate(_bullet, transform.position, Quaternion.LookRotation(Vector3.forward ,_pm.Direction));
             else Debug.LogError("No bullet assigned to PlayerShoot");
         }
     }
