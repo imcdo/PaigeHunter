@@ -21,5 +21,7 @@ public class PlayerShoot : MonoBehaviour
             if (_bullet != null) Instantiate(_bullet, transform.position, Quaternion.LookRotation(Vector3.forward ,_pm.Direction));
             else Debug.LogError("No bullet assigned to PlayerShoot");
         }
+        Debug.DrawLine(transform.position, (Vector2)transform.position + _pm.Direction * 2);
+
     }
 }
