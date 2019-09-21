@@ -47,9 +47,12 @@ public class Playerinteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("Fire2") > float.Epsilon)
+        if(Input.GetKeyDown("x"))
         {
             Dialogue();
         }
+
+        Vector3 x = new Vector3(_radiusint, _radiusint, 0);
+        Debug.DrawLine(transform.position, transform.position + x, Color.blue );
     }
 }
