@@ -8,8 +8,8 @@ public class BasicProjectile : MonoBehaviour
     [SerializeField] private float _speed = 5;
     [Tooltip("Time in secs until bullet disappears")]
     [SerializeField] private float _lifespan = 3;
+    [SerializeField] private float _damage = 10;
 
-    // Update is called once per frame
     void Update()
     {
         _lifespan -= Time.deltaTime;
@@ -27,6 +27,13 @@ public class BasicProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject target = collision.gameObject;
+        Health hit = target.GetComponent<Health>();
+        if (hit != null)
+        {
+            hit.Value -= _damage;
+            target.transform.position += transform.right * Time.deltaTime * _speed * 2; //knockback, can delete
+        }
         Destroy(gameObject);
     }
 }
