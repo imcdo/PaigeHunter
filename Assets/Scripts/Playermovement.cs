@@ -8,6 +8,8 @@ public class Playermovement : MonoBehaviour
 
     private Vector2 _prevpos;
     private Vector2 _velocity;
+    public Vector2 Velocity => _velocity;
+
 
     void Update()
     {
@@ -22,7 +24,5 @@ public class Playermovement : MonoBehaviour
         _prevpos = transform.position;
         transform.position = newPos;
         _velocity = (newPos - _prevpos) / Time.deltaTime;
-
-        Debug.Log(_velocity);
     }
 }
