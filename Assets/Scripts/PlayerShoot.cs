@@ -10,7 +10,13 @@ public class PlayerShoot : MonoBehaviour
     private Playermovement _pm;
     [SerializeField] private float _cooldown = .25f;
     private float _elapsed = 0;
-    
+
+    private void Start()
+    {
+        Health h = GetComponent<Health>();
+        h.HealthListener += () => Debug.Log(h.Value);
+    }
+
     void Awake()
     {
         _pm = GetComponent<Playermovement>();

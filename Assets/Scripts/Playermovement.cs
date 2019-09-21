@@ -11,7 +11,7 @@ public class Playermovement : MonoBehaviour
     public Vector2 Velocity => _velocity;
     public Vector2 Direction { get; private set; }
 
-    void Update()
+    void FixedUpdate()
     {
         float vert = Input.GetAxis("Vertical");
         float hor = Input.GetAxis("Horizontal");
