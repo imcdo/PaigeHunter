@@ -7,15 +7,19 @@ public enum Characters
 {
     Paige, Dog, Onion
 }
+
+[RequireComponent(typeof(DialogueTrigger))]
 public class CharacterInteraction : MonoBehaviour
 {
     // Start is called before the first frame update
-    public List<string> dialogue;
+    private DialogueTrigger _dt;
+    public DialogueTrigger DialogueTrigger => _dt;
     public List<Characters> speakers;
 
    
     void Start()
     {
+        _dt = GetComponent<DialogueTrigger>();
         
     }
 
