@@ -8,6 +8,8 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet;
     private Playermovement _pm;
+    [SerializeField] private float _cooldown = .25f;
+    private float _elapsed = 0;
     
     void Awake()
     {
@@ -15,13 +17,24 @@ public class PlayerShoot : MonoBehaviour
     }
     void Update()
     {
-        float fire = Input.GetAxis("Fire1");
-        if(fire > float.Epsilon)
+        _elapsed += Time.deltaTime;
+        if (_elapsed > _cooldown)
         {
-            if (_bullet != null) Instantiate(_bullet, transform.position, Quaternion.LookRotation(Vector3.forward ,_pm.Direction));
-            else Debug.LogError("No bullet assigned to PlayerShoot");
+            float fire = Input.GetAxis("Fire1");
+            if (fire > float.Epsilon)
+            {
+                if (_bullet != null)
+                {
+                    _elapsed = 0;
+                    Instantiate(_bullet, transform.position, Quaternion.FromToRotation(Vector3.right, _pm.Direction));
+                }
+                else
+                {
+                    Debug.LogError("No bullet assigned to PlayerShoot");
+                }
+            }
+            Debug.DrawLine(transform.position, (Vector2)transform.position + _pm.Direction * 2);
         }
-        Debug.DrawLine(transform.position, (Vector2)transform.position + _pm.Direction * 2);
 
     }
 }
