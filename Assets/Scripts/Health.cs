@@ -6,6 +6,7 @@ using System;
 public class Health : MonoBehaviour
 {
    public static implicit operator float(Health h) => h.Value;
+   public static explicit operator Health(float v) => new Health{Value = v}; // AVOID USE AT ALL COSTS X(
    
    [SerializeField] private float _initHealth = 10;
    private float _health;
