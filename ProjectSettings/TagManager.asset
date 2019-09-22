@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Bullet
+  - 
+  - 
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 158089235
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
