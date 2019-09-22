@@ -30,13 +30,14 @@ public class BasicProjectile : MonoBehaviour
         GameObject target = collision.gameObject;
         Debug.Log(target.transform.name);
         Health hit = target.GetComponent<Health>();
-        Shh shh = target.GetComponent<Shh>();
+        Shh shh = target.GetComponentInChildren<Shh>();
         
 		if (shh != null)
         {
             _speed *= -2;
             _damage *= 3;
             _damage /= 2;
+            gameObject.layer = LayerMask.NameToLayer("PlayerProjectiles");
 			return;
         }
 		
