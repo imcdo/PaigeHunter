@@ -23,7 +23,7 @@ public class RotatingProjectile : MonoBehaviour
         if (_lifespan > 0)
         {
             transform.position += _travelDirection * Time.deltaTime * _speed;
-            transform.Rotate(0, 0, 5, Space.Self);
+            transform.Rotate(0, 0, 10, Space.Self);
         }
         else
         {
@@ -39,12 +39,24 @@ public class RotatingProjectile : MonoBehaviour
         SpriteRenderer s = target.GetComponent<SpriteRenderer>();
         if (hit != null)
         {
-            s.color = new Color(1, 0, 0, 1);
             hit.Value -= _damage;
             target.transform.position += _travelDirection * Time.deltaTime * _speed * 2; //knockback, can delete
         }
-        s.color = new Color(1, 1, 1, 1);
+        
         Destroy(gameObject);
+        
+    }
+
+    IEnumerator FlashDamage(SpriteRenderer s, Health hit)
+    {
+        if (hit != null)
+        {
+            transform.localScale = new Vector3(0, 0, 0);
+            s.color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(.2f);
+            s.color = new Color(1, 1, 1, 1);
+        }
+
     }
 
 }

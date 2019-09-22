@@ -28,11 +28,16 @@ public class BasicProjectile : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject target = collision.gameObject;
+        Debug.Log(target.transform.name);
         Health hit = target.GetComponent<Health>();
         if (hit != null)
         {
             hit.Value -= _damage;
-            target.transform.position += transform.right * Time.deltaTime * _speed * 2; //knockback, can delete
+            var pm = target.GetComponent<Playermovement>();
+            if (pm == null)
+                target.transform.position += transform.right * Time.deltaTime * _speed * 2; //knockback, can delete
+            else 
+                pm.KnockBack(transform.right, _speed * 2);
         }
         Destroy(gameObject);
     }

@@ -10,17 +10,19 @@ public class Onion : MonoBehaviour
     private Health _health;
     private float _startHealth;
 
-    private bool _isCrying = false;
+    private bool _isAttacking = false;
     
     private void Awake()
     {
         _health = GetComponent<Health>();
-        _startHealth = _health.Value;
     }
 
     private void Start()
     {
-        _health.HealthListener += () => Debug.Log(_health.Value);
+//        _health.HealthListener += () => Debug.Log(_health.Value);
+        _startHealth = _health.Value;
+        StartCoroutine(Combat());
+
     }
 
 
@@ -31,46 +33,68 @@ public class Onion : MonoBehaviour
 //    enum Phase { }
     
 
-    IEnumerator StartCombat()
+    IEnumerator Combat()
     {
         Coroutine moveTowardsPlayer = StartCoroutine(MoveTowardsPlayer());
-
         Coroutine CryRoutine;
-        if (_health.Value <= _startHealth / 2)
-        {
-           CryRoutine = StartCoroutine(CryBurst((int) (_startHealth / _health.Value), ( _health.Value) ));
-           
-        }
-
         while (true)
         {
-            if (!_isCrying) CryRoutine = StartCoroutine(CryBurst((int) (_startHealth / _health.Value), (_health.Value)));
+            if (!_isAttacking && ((Vector2) _player.position - (Vector2) transform.position).magnitude < 2)
+            {
+                Debug.Log("MELEE");
+                StartCoroutine(Melee(5));
+            }
+            else if (!_isAttacking && _health.Value <= 7 * _startHealth / 8 )
+            {
+                Debug.Log("Start crying bois");
+                CryRoutine = StartCoroutine(CryBurst( (int) (10 * _startHealth / _health.Value), 
+                    (_health.Value) / _startHealth * 3, // max cooldown is the number 
+                    .05f,
+                    (int) (10 * _startHealth / _health.Value)));
+            }
+            
+           
+            yield return null;
         }
-        
-        yield return null;
+    }
+
+    private IEnumerator Melee(float damage, float attackspeed = .2f, float cooldown = 1f)
+    {
+        _isAttacking = true;
+
+        yield return new WaitForSeconds(attackspeed);
+        _player.GetComponent<Health>().Value -= damage;
+        _player.GetComponent<Playermovement>().KnockBack(_towardPlayer, damage * 2);
+        yield return new WaitForSeconds(cooldown);
+        _isAttacking = false;
     }
 
     IEnumerator MoveTowardsPlayer()
     {
         while (true)
         {
-            transform.position += (Vector3)(Speed * _towardPlayer);
+            Vector2 toPlayer = (Vector2) transform.position + (Speed * _towardPlayer) * Time.deltaTime;
+            Vector2 directPlayer = (Vector2)(_player.position - transform.position);
+
+            transform.position = (directPlayer.magnitude > toPlayer.magnitude) ? directPlayer : toPlayer;
             yield return null;
         }
     }
 
-    IEnumerator CryBurst(int tearAmount,float cooldown, float speed = .2f, float angleVariance = 5)
+    IEnumerator CryBurst(int tearAmount,float cooldown, float speed = .05f, float angleVariance = 5)
     {
-        _isCrying = true;
-
+        _isAttacking = true;
+        
+        Debug.Log("tear amount " + tearAmount + " cooldown " + cooldown + " angle " + angleVariance);
         for (int i = 0; i < tearAmount; i++)
         {
-            float angle =  (2 * Random.value - 1) * angleVariance;
+            float angle =  (2 * Random.value - 1) * angleVariance + 90;
+            Debug.Log("SHOOT");
             Instantiate(_projectile, transform.position, Quaternion.LookRotation(Vector3.forward, _towardPlayer.Rotate(angle)));
             yield return new WaitForSeconds(speed);
         }
         yield return new WaitForSeconds(cooldown);
-        _isCrying = false;
+        _isAttacking = false;
     }
 }
 

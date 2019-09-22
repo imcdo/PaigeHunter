@@ -14,7 +14,7 @@ public class PlayerShoot : MonoBehaviour
     private void Start()
     {
         Health h = GetComponent<Health>();
-        h.HealthListener += () => Debug.Log(h.Value);
+//        h.HealthListener += () => Debug.Log(h.Value);
     }
 
     void Awake()
