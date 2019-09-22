@@ -8,12 +8,15 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Image prof;
+    public AudioSource music;
 
     public Animator animator;
 
     private Queue<string> sentences;
     private Queue<Sprite> images;
     private Queue<string> names;
+
+    //private Queue<AudioSource> audios;
 
     private Onion o;
     private DogBehavior dog;
@@ -27,9 +30,14 @@ public class DialogueManager : MonoBehaviour
         images = new Queue<Sprite>();
         names = new Queue<string>();
 
+        //audios = new Queue<AudioSource>();
+
         o = FindObjectOfType<Onion>();
         dog = FindObjectOfType<DogBehavior>();
         player = FindObjectOfType<Playermovement>();
+
+
+
     }
 
     // Update is called once per frame
@@ -60,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         if(sentences.Count == 0)
         {
             EndDialogue();
+            
             return;
         }
 
