@@ -54,7 +54,7 @@ public class DogBehavior : MonoBehaviour
         {
             Vector3 targetDirection1 = _player.transform.position - transform.position;
             Instantiate(_bork, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection1));
+            yield return new WaitForSeconds(Random.Range(4, 7));
         }
-        yield return new WaitForSeconds(Random.Range(4, 7));
     }
 }

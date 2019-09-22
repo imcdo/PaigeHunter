@@ -10,13 +10,11 @@ public class Bork : MonoBehaviour
     [SerializeField] private float _lifespan = 3;
     [SerializeField] private float _damage = 10;
 
-    void Start()
-    {
-        transform.localScale = new Vector3(.5f, .5f, 1);
-    }
+
 
     void Update()
     {
+        Debug.Log("Started bork!");
         _lifespan -= Time.deltaTime;
 
         if (_lifespan > 0)
