@@ -41,12 +41,9 @@ public class PlayerShoot : MonoBehaviour
             }
             Debug.DrawLine(transform.position, (Vector2)transform.position + _pm.Direction * 2);
         }
-//<<<<<<< Updated upstream
-//=======
+
         Debug.DrawLine(transform.position, (Vector2)transform.position + _pm.Direction * 2);
         
-   
-
-//>>>>>>> Stashed changes
+  
     }
 }

@@ -123,9 +123,6 @@ public class Playermovement : MonoBehaviour
             Physics.IgnoreLayerCollision(8, 10, false); //undo invincbility 
         
         }
-         
-        
-        
 
         
     }
