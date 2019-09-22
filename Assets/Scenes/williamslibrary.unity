@@ -617,6 +617,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3307099851300456601, guid: 7337596f8209bd649bc7b9f01adb3549,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3307099851300456598, guid: 7337596f8209bd649bc7b9f01adb3549,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -682,11 +687,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 3307099851300456601, guid: 7337596f8209bd649bc7b9f01adb3549,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 3307099851300456597, guid: 7337596f8209bd649bc7b9f01adb3549,
         type: 3}
       propertyPath: m_Offset.y
@@ -710,6 +710,16 @@ PrefabInstance:
     - target: {fileID: 1927058581, guid: 7337596f8209bd649bc7b9f01adb3549, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307099851300456600, guid: 7337596f8209bd649bc7b9f01adb3549,
+        type: 3}
+      propertyPath: _dashdist
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 847382571748141991, guid: 7337596f8209bd649bc7b9f01adb3549,
+        type: 3}
+      propertyPath: _radiusint
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7337596f8209bd649bc7b9f01adb3549, type: 3}
@@ -4039,6 +4049,36 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1846360772}
+    - target: {fileID: 6808740126379797420, guid: d5176e0d0a3dab94fbbd43bdcc15bb44,
+        type: 3}
+      propertyPath: dialogue.images.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dac2a38a2a932b418a0537d13a9945a,
+        type: 3}
+    - target: {fileID: 6808740126379797420, guid: d5176e0d0a3dab94fbbd43bdcc15bb44,
+        type: 3}
+      propertyPath: dialogue.images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dac2a38a2a932b418a0537d13a9945a,
+        type: 3}
+    - target: {fileID: 6808740126379797420, guid: d5176e0d0a3dab94fbbd43bdcc15bb44,
+        type: 3}
+      propertyPath: dialogue.images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 74cc9b0d0af51624d90be93441107492,
+        type: 3}
+    - target: {fileID: 6808740126379797420, guid: d5176e0d0a3dab94fbbd43bdcc15bb44,
+        type: 3}
+      propertyPath: dialogue.images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 34f80e2cdbe3c5640aacbf84b7e4785c,
+        type: 3}
+    - target: {fileID: 6808740126379797420, guid: d5176e0d0a3dab94fbbd43bdcc15bb44,
+        type: 3}
+      propertyPath: dialogue.images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0dac2a38a2a932b418a0537d13a9945a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5176e0d0a3dab94fbbd43bdcc15bb44, type: 3}
 --- !u!1 &767603050

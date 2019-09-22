@@ -88,9 +88,9 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         var on = FindObjectOfType<Onion>();
         
-        if (Vector2.Distance(on.transform.position,player. transform.position) < 3)  
+        if (Vector2.Distance(on.transform.position,player. transform.position) < 5)  
             on.BeginAttack();   
-        if (Vector2.Distance(on.transform.position,player. transform.position) < 3)  
+        if (Vector2.Distance(on.transform.position,player. transform.position) < 5)  
             dog.BeginAttack();   
     }
 }
