@@ -28,13 +28,22 @@ public class RulerAttack : MonoBehaviour
             StartCoroutine(DelayVisibility(.5f));
 
         }
+    }
 
-        IEnumerator DelayVisibility(float wait)
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Health h = other.gameObject.GetComponent<Health>();
+        if (h != null)
         {
-            yield return new WaitForSeconds(wait);
-            gameObject.GetComponent<Renderer>().enabled = false;
-            m_Collider.enabled = false;
+            h.Value -= 7;
+        }    
+    }
 
-        }
+    IEnumerator DelayVisibility(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        gameObject.GetComponent<Renderer>().enabled = false;
+        m_Collider.enabled = false;
+
     }
 }
