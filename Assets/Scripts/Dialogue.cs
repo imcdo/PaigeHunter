@@ -10,6 +10,7 @@ public class Dialogue
     public Sprite[] images;
     [TextArea(3, 10)]
     public string[] sentences;
+    //public AudioSource[] audiosource;
 
     
 
