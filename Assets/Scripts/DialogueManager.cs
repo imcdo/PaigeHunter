@@ -13,11 +13,14 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private Queue<Sprite> images;
+    private Queue<string> names;
+
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
         images = new Queue<Sprite>();
+        names = new Queue<string>();
     }
 
     // Update is called once per frame
@@ -29,22 +32,25 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-
-        nameText.text = dialogue.name;
-       
         //queue up images and sentences given for character into internal variables to be dequed.
-        foreach(Sprite image in dialogue.images)
-        {
-            images.Enqueue(image);
-        }
-
         sentences.Clear();
 
+        for (int i = 0; i < dialogue.sentences.Length; i++)
+        {
+            images.Enqueue(dialogue.images[i]);
+            sentences.Enqueue(dialogue.sentences[i]);
+            names.Enqueue(dialogue.names[i]);
+        }
+
+        DisplayNextSentence();
+
+        /*
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-        DisplayNextSentence();
+        */
+       
     }
 
     public void DisplayNextSentence()
@@ -57,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         prof.sprite = images.Dequeue();
-
+        nameText.text = names.Dequeue();
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
