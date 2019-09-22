@@ -36,11 +36,15 @@ public class RotatingProjectile : MonoBehaviour
     {
         GameObject target = collision.gameObject;
         Health hit = target.GetComponent<Health>();
+        SpriteRenderer s = target.GetComponent<SpriteRenderer>();
         if (hit != null)
         {
+            s.color = new Color(1, 0, 0, 1);
             hit.Value -= _damage;
             target.transform.position += _travelDirection * Time.deltaTime * _speed * 2; //knockback, can delete
         }
+        s.color = new Color(1, 1, 1, 1);
         Destroy(gameObject);
     }
+
 }
