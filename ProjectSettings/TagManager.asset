@@ -17,7 +17,7 @@ TagManager:
   - PlayerProjectiles
   - EnemyProjectiles
   - Enemy
-  - 
+  - Objects
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   m_SortingLayers:
   - name: Floor
     uniqueID: 2820632733
+    locked: 0
+  - name: Chairs
+    uniqueID: 2681177259
+    locked: 0
+  - name: Tables
+    uniqueID: 716105769
     locked: 0
   - name: Default
     uniqueID: 0
