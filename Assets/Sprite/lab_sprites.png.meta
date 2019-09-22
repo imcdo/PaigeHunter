@@ -1,7 +1,34 @@
 fileFormatVersion: 2
-guid: 9ed5b88d8a1a67c489cbafb80025cd6a
+guid: c46cbd1a3dc1e36459ffbff13cf0d57c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6318337474806075993
+    second: lab_sprites_0
+  - first:
+      213: 9105311374451306268
+    second: lab_sprites_1
+  - first:
+      213: -3537250225853179987
+    second: lab_sprites_2
+  - first:
+      213: -200530567034322883
+    second: lab_sprites_3
+  - first:
+      213: -6126662790864904392
+    second: lab_sprites_4
+  - first:
+      213: -2682282146772176403
+    second: lab_sprites_5
+  - first:
+      213: 4745027397879681927
+    second: lab_sprites_6
+  - first:
+      213: 3712678498402413859
+    second: lab_sprites_7
+  - first:
+      213: 4343925760325385492
+    second: lab_sprites_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,13 +96,213 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lab_sprites_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 301
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad145eb6217c51479a4fcdc84e21d77
+      internalID: 6318337474806075993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 300
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936197c293e52374aba846368afa26f3
+      internalID: 9105311374451306268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 299
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3607cc9025e2b00439d424f425116969
+      internalID: -3537250225853179987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 178
+        width: 49
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960e97eee4721b5488be111cef0a209a
+      internalID: -200530567034322883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_4
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 177
+        width: 49
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334e639b11eb48c4285f659e64b0ea7f
+      internalID: -6126662790864904392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 177
+        width: 49
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c985d2863b90145ab6f9bd5b6f8ffd
+      internalID: -2682282146772176403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_6
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 64
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0463ca4894b67164c823cea4712bb61a
+      internalID: 4745027397879681927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_7
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 62
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feb618f9ef807e4f8dfeb708842fd6d
+      internalID: 3712678498402413859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab_sprites_8
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 61
+        width: 57
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8325267563cba94085d27be2ae898c6
+      internalID: 4343925760325385492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f963cf6f1d8da4845a13cdb7a73161c8
+    spriteID: 82e3bab5dc868a04c883e9aa6c602f0a
     internalID: 0
     vertices: []
     indices: 

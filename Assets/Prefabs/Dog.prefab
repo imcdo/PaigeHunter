@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2167869565757367282}
   - component: {fileID: 8550908528458714404}
   - component: {fileID: 508789212598833661}
-  m_Layer: 0
+  - component: {fileID: -8825864956514502011}
+  m_Layer: 11
   m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,13 +70,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2475730568722495641, guid: ed9c8e7bfb8ad9740b2842ed7c4d0a50,
+  m_Sprite: {fileID: 6318337474806075993, guid: c46cbd1a3dc1e36459ffbff13cf0d57c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.65, y: 0.63}
+  m_Size: {x: 0.57, y: 0.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -90,6 +91,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771771867911410610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48421e6c3d11e3d4c9a4b5d1f5af25b5, type: 3}
+  m_Script: {fileID: 11500000, guid: d342de5ac07ad7f4a9453ffdaad35d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _beaker: {fileID: 3343874537880452436, guid: af6c7ce68e221cf449dfa4c03fe291d6, type: 3}
+  _bork: {fileID: 1570310065411154275, guid: 5b3bcd94f1b00bd4db73d85af28ccf06, type: 3}
+  _player: {fileID: 3307099851300456601, guid: 7337596f8209bd649bc7b9f01adb3549, type: 3}
+--- !u!95 &-8825864956514502011
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771771867911410610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ac1b70bd7d42f4cbbe1ef3feae4556, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
