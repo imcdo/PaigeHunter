@@ -17,9 +17,13 @@ public class Playermovement : MonoBehaviour
     public Vector2 Velocity => _velocity;
     public Vector2 Direction { get; private set; }
 
+    private Shh _shh;
+
     private void Awake()
     {
         _myAnimator = GetComponent<Animator>();
+        _shh = GetComponentInChildren<Shh>();
+        _shh.gameObject.SetActive(false);
     }
 
     void Update()
@@ -58,8 +62,20 @@ public class Playermovement : MonoBehaviour
 
         _myAnimator?.SetInteger("Direction", (int) dir);
         _myAnimator?.SetFloat("Speed", _velocity.magnitude);
+
+        if (Input.GetKeyDown("l") && !_shh.gameObject.activeSelf)
+        {
+            StartCoroutine(Shush(3));
+        }
     }
 
+    IEnumerator Shush(float time)
+    {
+        _shh.gameObject.SetActive(true);
+        yield return new WaitForSeconds(time);
+        _shh.gameObject.SetActive(false);
+    }
+        
     public void KnockBack(Vector2 dir, float strength, float friction = 3f)
     {
         StartCoroutine(KnockbackRoutine(dir, strength, friction));
@@ -76,6 +92,8 @@ public class Playermovement : MonoBehaviour
             appliedVel = strength * dir;
             yield return null;
         }
+        
+        
     }
     
     void FixedUpdate()

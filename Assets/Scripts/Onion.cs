@@ -51,7 +51,7 @@ public class Onion : MonoBehaviour
             {
                 Debug.Log("Start crying bois");
                 CryRoutine = StartCoroutine(CryBurst( (int) (10 * _startHealth / _health.Value), 
-                    (_health.Value) / _startHealth * 3, // max cooldown is the number 
+                    (_health.Value) / _startHealth * 5, // max cooldown is the number 
                     .05f,
                     (int) (10 * _startHealth / _health.Value)));
             }
