@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playermovement : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class Playermovement : MonoBehaviour
 
     void Update()
     {
+        Health h = GetComponent<Health>();
+        if(h.Value <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         Directions dir;
         /*      if (Mathf.Abs(Direction.x) > float.Epsilon && Mathf.Abs(Direction.y) <= float.Epsilon)
                   dir = (Direction.x < 0) ? Directions.West : Directions.East;

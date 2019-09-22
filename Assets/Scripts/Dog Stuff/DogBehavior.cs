@@ -24,9 +24,8 @@ public class DogBehavior : MonoBehaviour
     private void Start()
     {
 
-        _phase = 0;
-        _startHealth = _health.Value;
-        StartCoroutine(Attack(2f));
+        _phase = -1;
+
 
         //StartCoroutine(BeakerBurst(.5f));
         //StartCoroutine(Bork());
@@ -41,6 +40,15 @@ public class DogBehavior : MonoBehaviour
             }
         };*/
 
+    }
+
+    void Update()
+    {
+        if(_phase == 0)
+        {
+            _startHealth = _health.Value;
+            StartCoroutine(Attack(2f));
+        }
     }
 
     [SerializeField] private float _speed = 5;
@@ -110,6 +118,7 @@ public class DogBehavior : MonoBehaviour
 
     public void BeginAttack()
     {
+        Debug.Log("AHAHAHHH");
         _phase++;
     }
 
