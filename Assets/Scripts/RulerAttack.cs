@@ -36,8 +36,5 @@ public class RulerAttack : MonoBehaviour
             m_Collider.enabled = false;
 
         }
-
-
-
     }
 }
