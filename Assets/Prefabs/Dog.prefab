@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 8550908528458714404}
   - component: {fileID: 508789212598833661}
   - component: {fileID: -8825864956514502011}
-  - component: {fileID: -4832106173103979211}
-  - component: {fileID: 7332414885161247875}
-  - component: {fileID: -7077372815662373358}
+  - component: {fileID: -3444237549581205853}
   m_Layer: 11
   m_Name: Dog
   m_TagString: Untagged
@@ -119,7 +117,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-4832106173103979211
+--- !u!114 &-3444237549581205853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,99 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1771771867911410610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd0fcf4f60f976428d23714cecde5ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 126007f4d45b9ab4ea77c81437e76759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    names:
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Paige Hunter
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    - Lab, The Research Dog
-    images:
-    - {fileID: 21300000, guid: ce002b8258dca144793676a82c5a57ce, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: ce002b8258dca144793676a82c5a57ce, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: ce002b8258dca144793676a82c5a57ce, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: ce002b8258dca144793676a82c5a57ce, type: 3}
-    - {fileID: -4388750317042911659, guid: c78f2fc76233a7047a9c0d30c1616f1f, type: 3}
-    - {fileID: 21300000, guid: ce002b8258dca144793676a82c5a57ce, type: 3}
-    - {fileID: 21300000, guid: 4adf33522c7fb03448a0bc5ce88a54f9, type: 3}
-    - {fileID: 21300000, guid: 4adf33522c7fb03448a0bc5ce88a54f9, type: 3}
-    - {fileID: 21300000, guid: a18c06ffe32a90a4091aee73f1ed2ca6, type: 3}
-    sentences:
-    - '*woof* I work for good boys inc.'
-    - Huh? My book on chew toy aerodynamics is overdue?
-    - "I was hoping I wouldn\u2019t have to reveal this fact, but as it turns out,
-      I think I\u2019ve lost it under my important papers of academic study. "
-    - Could you get it to me as soon as possible?
-    - "Well, you see, I\u2019m doing very important research on chew toy chemistry
-      and I cannot for the life of me take the time to clean these papers."
-    - "Really?\r\n"
-    - "Yes. In fact, I\u2019m afraid to even touch the papers. Every time I touch
-      them, some of them seem to disappear. I can\u2019t possibly fathom why."
-    - Where could they possibly go?
-    - "Well\u2026"
-    - I have my suspicions.
-    - '...'
-    - "They do look rather delicious. I suspect my dog is eating them.\r\n"
-    - '...'
-    - '...'
-    - "You\u2019re eating them, aren\u2019t you."
-    - Of course not!
-    - '*bleeerrrup*'
-    - '...'
-    - You'll never take me alive
---- !u!114 &7332414885161247875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771771867911410610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56dcef614aecca743a3cc66796e4b75b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speakers: 
---- !u!58 &-7077372815662373358
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771771867911410610}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
+  _initHealth: 80
