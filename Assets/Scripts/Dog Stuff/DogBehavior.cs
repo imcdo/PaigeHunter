@@ -38,17 +38,13 @@ public class DogBehavior : MonoBehaviour
                 {
                 Debug.Log("In if statement");
 
-                Vector3 modifier = new Vector3(0, 10, 0);
-                Vector3 targetDirection1 = _player.transform.position - transform.position;
-                Vector3 targetDirection2 = _player.transform.position - transform.position + modifier;
-                Vector3 targetDirection3 = _player.transform.position + transform.position - modifier;
-
-                Vector3 b1 = new Vector3(_player.transform.position.x, _player.transform.position.y + 2, 0);
-                Vector3 b2 = new Vector3(_player.transform.position.x, _player.transform.position.y - 2, 0);
-
-                Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection1));
-                Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection2));
-                Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection3));
+                Vector3 modifiedPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    Vector3 targetDirection1 = _player.transform.position - transform.position;
+                    Vector3 targetDirection2 = _player.transform.position - modifiedPos;
+                    Vector3 targetDirection3 = _player.transform.position + modifiedPos;
+                    Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection1));
+                    Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection2));
+                    Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection3));
 
 
             }
