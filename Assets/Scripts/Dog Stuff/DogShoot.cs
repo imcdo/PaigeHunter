@@ -20,10 +20,18 @@ public class DogShoot : MonoBehaviour
         {
             if (_bullet != null && _target != null)
             {
-                Vector3 targetDirection = _target.transform.position - transform.position;
+                float rot = 10;
+                Vector2 targetDirection = (_target.transform.position - transform.position).normalized;
+                float rad = Mathf.Deg2Rad * rot;
+                Vector2 b1 = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) + targetDirection;
+                Vector2 b2 = new Vector2(Mathf.Cos(-rad), Mathf.Sin(-rad)) + targetDirection;
+
                 Instantiate(_bullet, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection));
+                Instantiate(_bullet, transform.position, Quaternion.FromToRotation(Vector3.right, b1));
+                Instantiate(_bullet, transform.position, Quaternion.FromToRotation(Vector3.right, b2));
             }
             _timer = 0;
         }
     }
 }
+        
