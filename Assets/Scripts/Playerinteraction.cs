@@ -53,6 +53,6 @@ public class Playerinteraction : MonoBehaviour
         }
 
         Vector3 x = new Vector3(_radiusint, _radiusint, 0);
-        Debug.DrawLine(transform.position, transform.position + x, Color.blue );
+        Debug.DrawLine(transform.position, transform.position + x);
     }
 }
