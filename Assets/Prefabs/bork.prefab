@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1700113720039008642}
   - component: {fileID: 6021531544539635970}
   - component: {fileID: -5463325752365180182}
+  - component: {fileID: 6456568809376694730}
   m_Layer: 10
   m_Name: bork
   m_TagString: Untagged
@@ -120,3 +121,18 @@ EdgeCollider2D:
   m_Points:
   - {x: -0.5, y: 0}
   - {x: 0.5, y: 0}
+--- !u!114 &6456568809376694730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570310065411154275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f27aece0fa276d40b64f0294d985804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 7
+  _lifespan: 2
+  _damage: 0
