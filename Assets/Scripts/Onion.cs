@@ -21,8 +21,12 @@ public class Onion : MonoBehaviour
     {
 //        _health.HealthListener += () => Debug.Log(_health.Value);
         _startHealth = _health.Value;
-        StartCoroutine(Combat());
 
+    }
+
+    public void BeginAttack()
+    {
+        StartCoroutine(Combat());
     }
 
 

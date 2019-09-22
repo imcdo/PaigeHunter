@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8389141719904983174}
   - component: {fileID: 8389141719904983172}
   - component: {fileID: 8389141719904983173}
+  - component: {fileID: 6808740126379797420}
+  - component: {fileID: 4731434635467376381}
   m_Layer: 11
   m_Name: Onion
   m_TagString: Untagged
@@ -100,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.47, y: 1.06}
+    oldSize: {x: 1.88, y: 4.24}
     newSize: {x: 6, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -150,3 +152,51 @@ MonoBehaviour:
   _projectile: {fileID: 4408506432714632072, guid: b95827498a54fc04eac3877b7897cddf,
     type: 3}
   _speed: 3
+--- !u!114 &6808740126379797420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389141719904983194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd0fcf4f60f976428d23714cecde5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    names:
+    - The Onion, an Onion
+    - The Onion, an Onion
+    - The Onion, an Onion
+    - The Onion, an Onion
+    - The Onion, an Onion
+    images:
+    - {fileID: 21300000, guid: 042849a1a36309b4ea6c68c27fa0d5a1, type: 3}
+    - {fileID: 21300000, guid: 042849a1a36309b4ea6c68c27fa0d5a1, type: 3}
+    - {fileID: 21300000, guid: 6e79ee990b957d7498c9732eb07c5c64, type: 3}
+    - {fileID: 21300000, guid: 599576791e4ad6a44a45e5afa73d808f, type: 3}
+    - {fileID: 21300000, guid: 599576791e4ad6a44a45e5afa73d808f, type: 3}
+    sentences:
+    - 'I am THE onion, first of his name,
+
+      breaker of pans, and mother of dragonfruit.'
+    - '*Hmm... you want me to return "A Billion Things You Can Do With Onions"?'
+    - '*Not a chance, honey. I refuse to let you pesky humans slaughter my kind any
+      longer.'
+    - 'You humans, you steal our children, trap us in plastic prisons, and fry us
+      alive. '
+    - I'll never return this book. Tremble in fear at my black belt level onion karate!
+--- !u!114 &4731434635467376381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8389141719904983194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56dcef614aecca743a3cc66796e4b75b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speakers: 

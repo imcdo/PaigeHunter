@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
     private Queue<Sprite> images;
     private Queue<string> names;
 
+    private Onion o;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +86,10 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        
         animator.SetBool("IsOpen", false);
+        var on = FindObjectOfType<Onion>();
+        on.GetComponent<SpriteRenderer>().color = Color.red;
+        on.BeginAttack();
     }
 }

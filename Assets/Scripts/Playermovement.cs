@@ -103,7 +103,7 @@ public class Playermovement : MonoBehaviour
           
             Debug.Log("Space is pressed");
 
- 
+            // KnockBack(Direction,_dashdist);
             newPos = (Vector2)transform.position + new Vector2(
             _dashdist * hor * Time.deltaTime,
             _dashdist * vert * Time.deltaTime

@@ -22,8 +22,7 @@ public class RulerAttack : MonoBehaviour
         {
             Debug.Log("hello");
             gameObject.GetComponent<Renderer>().enabled = true;
-            m_Collider.enabled = true;
-
+            //m_Collider.enabled = true;
             _Ruler.SetTrigger("Attack");
             StopAllCoroutines();
             StartCoroutine(DelayVisibility(.5f));
