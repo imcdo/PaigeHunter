@@ -592,6 +592,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126007f4d45b9ab4ea77c81437e76759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &841769629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3307099851300456598, guid: 7337596f8209bd649bc7b9f01adb3549,
+    type: 3}
+  m_PrefabInstance: {fileID: 61899823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1060518098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +911,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 508789212598833661, guid: 5778f95669b7b5848b75fe091f87348c,
+        type: 3}
+      propertyPath: _playerTrans
+      value: 
+      objectReference: {fileID: 841769629}
+    - target: {fileID: 508789212598833661, guid: 5778f95669b7b5848b75fe091f87348c,
+        type: 3}
+      propertyPath: _speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5778f95669b7b5848b75fe091f87348c, type: 3}

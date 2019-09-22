@@ -50,6 +50,7 @@ public class DogBehavior : MonoBehaviour
 
     IEnumerator Attack(float beakerCD)
     {
+        _canAttack = true;
         Debug.Log("attack");
         StartCoroutine(MoveTowardsPlayer());
         while (true)
@@ -72,10 +73,11 @@ public class DogBehavior : MonoBehaviour
     {
         if (_beaker != null && _player != null)
         {
-            Vector3 targetDirection1 = _player.transform.position - transform.position;
+            Vector3 targetDirection1 = _playerTrans.position - transform.position;
             Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection1));
             if (_health <= _startHealth / 2)
             {
+                Debug.Log("Dog phase 2");
                 Vector3 targetDirection2 = new Vector3(targetDirection1.x, targetDirection1.y, 0);
                 Vector2Extension.Rotate((Vector2) targetDirection2, 15);
                 Instantiate(_beaker, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection2));
@@ -90,7 +92,7 @@ public class DogBehavior : MonoBehaviour
 
     IEnumerator Bork()
     {
-        Vector3 targetDirection1 = _player.transform.position - transform.position;
+        Vector3 targetDirection1 = _playerTrans.position - transform.position;
         Instantiate(_bork, transform.position, Quaternion.FromToRotation(Vector3.right, targetDirection1));
         yield return new WaitForSeconds(Random.Range(4, 6));
         _canAttack = true;
@@ -100,11 +102,8 @@ public class DogBehavior : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("dogfollow");
             Vector2 toPlayer = (Vector2)transform.position + (_speed * _towardPlayer) * Time.deltaTime;
-            Vector2 directPlayer = (Vector2)(_playerTrans.position - transform.position);
-
-            transform.position = (directPlayer.magnitude > toPlayer.magnitude) ? directPlayer : toPlayer;
+            transform.position = toPlayer;
             yield return null;
         }
     }
