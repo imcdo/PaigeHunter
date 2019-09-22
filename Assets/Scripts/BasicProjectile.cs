@@ -31,7 +31,16 @@ public class BasicProjectile : MonoBehaviour
         Debug.Log(target.transform.name);
         Health hit = target.GetComponent<Health>();
         Shh shh = target.GetComponent<Shh>();
-        if (hit != null)
+        
+		if (shh != null)
+        {
+            _speed *= -2;
+            _damage *= 3;
+            _damage /= 2;
+			return;
+        }
+		
+		if (hit != null)
         {
             hit.Value -= _damage;
             var pm = target.GetComponent<Playermovement>();
@@ -40,12 +49,7 @@ public class BasicProjectile : MonoBehaviour
             else 
                 pm.KnockBack(transform.right, _speed * 2);
         }
-        else if (shh != null)
-        {
-            _speed *= -2;
-            _damage *= 3;
-            _damage /= 2;
-        }
+        
         Destroy(gameObject);
     }
 }
