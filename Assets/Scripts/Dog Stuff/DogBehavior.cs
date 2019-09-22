@@ -13,8 +13,10 @@ public class DogBehavior : MonoBehaviour
     void Start()
     {
         _phase = 2;
-        BeakerBurst(2f);
+
         StartCoroutine(BeakerBurst(.5f));
+        StartCoroutine(Bork());
+
     }
 
     // Update is called once per frame
