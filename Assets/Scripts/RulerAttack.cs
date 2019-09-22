@@ -21,7 +21,7 @@ public class RulerAttack : MonoBehaviour
         if (Input.GetKeyDown("k"))
         {
             Debug.Log("hello");
-            gameObject.GetComponent<Renderer>().enabled = true;
+            //gameObject.GetComponent<Renderer>().enabled = true;
             //m_Collider.enabled = true;
             _Ruler.SetTrigger("Attack");
             StopAllCoroutines();
@@ -32,7 +32,7 @@ public class RulerAttack : MonoBehaviour
         IEnumerator DelayVisibility(float wait)
         {
             yield return new WaitForSeconds(wait);
-            gameObject.GetComponent<Renderer>().enabled = false;
+            //gameObject.GetComponent<Renderer>().enabled = false;
             //m_Collider.enabled = false;
 
         }

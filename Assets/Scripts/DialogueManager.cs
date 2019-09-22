@@ -90,6 +90,6 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         var on = FindObjectOfType<Onion>();
         on.GetComponent<SpriteRenderer>().color = Color.red;
-        on.BeginAttack();
+        on.BeginAttack();   
     }
 }
