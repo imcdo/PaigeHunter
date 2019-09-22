@@ -60,6 +60,24 @@ public class Playermovement : MonoBehaviour
         _myAnimator?.SetFloat("Speed", _velocity.magnitude);
     }
 
+    public void KnockBack(Vector2 dir, float strength, float friction = 3f)
+    {
+        StartCoroutine(KnockbackRoutine(dir, strength, friction));
+    }
+
+    private IEnumerator KnockbackRoutine(Vector2 dir, float strength, float friction)
+    {
+        Vector2 appliedVel = strength * dir;
+        while (strength > float.Epsilon)
+        {
+            transform.position += (Vector3)appliedVel * Time.deltaTime;
+            friction *= friction;
+            strength -= friction * Time.deltaTime;
+            appliedVel = strength * dir;
+            yield return null;
+        }
+    }
+    
     void FixedUpdate()
     {
         float vert = Input.GetAxis("Vertical");
@@ -105,7 +123,9 @@ public class Playermovement : MonoBehaviour
             Physics.IgnoreLayerCollision(8, 10, false); //undo invincbility 
         
         }
-            
+         
+        
+        
 
         
     }
