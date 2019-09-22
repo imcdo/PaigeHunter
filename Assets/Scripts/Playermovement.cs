@@ -8,6 +8,10 @@ public class Playermovement : MonoBehaviour
     enum Directions { East, NorthEast, North, NorthWest, West, SouthWest, South, SouthEast}
     [SerializeField] float _speed = 5f;
 
+    [SerializeField] float _dashdist = 20f;
+    [SerializeField] private float _cooldown = .25f;
+    private float _elapsed = 0;
+
     private Vector2 _prevPos;
     private Vector2 _velocity;
     public Vector2 Velocity => _velocity;
@@ -71,5 +75,38 @@ public class Playermovement : MonoBehaviour
         _velocity = (newPos - _prevPos) / Time.deltaTime;
 
         if (_velocity.magnitude > float.Epsilon) Direction = _velocity.normalized;
+
+        _elapsed += Time.deltaTime;
+
+        //dash mechanic
+        if (Input.GetKeyDown("space") && _elapsed > _cooldown)
+        {
+            Physics.IgnoreLayerCollision(8, 10); //set incibility
+          
+            Debug.Log("Space is pressed");
+
+ 
+            newPos = (Vector2)transform.position + new Vector2(
+            _dashdist * hor * Time.deltaTime,
+            _dashdist * vert * Time.deltaTime
+            );
+
+            //if no direction input
+            if(hor == 0 && vert == 0)
+            {
+                newPos = (Vector2)transform.position + new Vector2(
+            _dashdist * hor * Time.deltaTime,
+            _dashdist * -1 * Time.deltaTime
+            );
+            }
+
+            transform.position = newPos;
+            _elapsed = 0; //reset cooldown timer
+            Physics.IgnoreLayerCollision(8, 10, false); //undo invincbility 
+        
+        }
+            
+
+        
     }
 }
