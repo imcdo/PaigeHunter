@@ -17,22 +17,9 @@ public class Playermovement : MonoBehaviour
     public Vector2 Velocity => _velocity;
     public Vector2 Direction { get; private set; }
 
-    private Shh _shh;
-    
     private void Awake()
     {
         _myAnimator = GetComponent<Animator>();
-        _shh = GetComponentInChildren<Shh>();
-        _shh?.gameObject.SetActive(false);
-
-    }
-
-    IEnumerator Shush(float time)
-    {
-        _shh.gameObject.SetActive(true);
-        yield return new WaitForSeconds(time);
-        _shh.gameObject.SetActive(false);
-
     }
 
     void Update()
@@ -71,11 +58,6 @@ public class Playermovement : MonoBehaviour
 
         _myAnimator?.SetInteger("Direction", (int) dir);
         _myAnimator?.SetFloat("Speed", _velocity.magnitude);
-
-        if (Input.GetKeyDown("l") && _shh != null && !_shh.gameObject.activeSelf)
-        {
-            StartCoroutine(Shush(2));
-        }
     }
 
     public void KnockBack(Vector2 dir, float strength, float friction = 3f)
@@ -121,7 +103,7 @@ public class Playermovement : MonoBehaviour
           
             Debug.Log("Space is pressed");
 
-            // KnockBack(Direction,_dashdist);
+ 
             newPos = (Vector2)transform.position + new Vector2(
             _dashdist * hor * Time.deltaTime,
             _dashdist * vert * Time.deltaTime
