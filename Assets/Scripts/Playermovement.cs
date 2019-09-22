@@ -5,6 +5,8 @@ using UnityEngine;
 public class Playermovement : MonoBehaviour
 {
     private Animator _myAnimator;
+    
+
     enum Directions { East, NorthEast, North, NorthWest, West, SouthWest, South, SouthEast}
     [SerializeField] float _speed = 5f;
 
@@ -20,6 +22,7 @@ public class Playermovement : MonoBehaviour
     private void Awake()
     {
         _myAnimator = GetComponent<Animator>();
+
     }
 
     void Update()
@@ -105,7 +108,6 @@ public class Playermovement : MonoBehaviour
             Physics.IgnoreLayerCollision(8, 10, false); //undo invincbility 
         
         }
-            
 
         
     }
