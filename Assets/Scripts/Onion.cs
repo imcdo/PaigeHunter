@@ -19,7 +19,6 @@ public class Onion : MonoBehaviour
 
     private void Start()
     {
-//        _health.HealthListener += () => Debug.Log(_health.Value);
         _startHealth = _health.Value;
 
     }

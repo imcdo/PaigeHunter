@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> names;
 
     private Onion o;
+    private DogBehavior dog;
+    private Playermovement player;
 
     
     // Start is called before the first frame update
@@ -24,6 +26,10 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         images = new Queue<Sprite>();
         names = new Queue<string>();
+
+        o = FindObjectOfType<Onion>();
+        dog = FindObjectOfType<DogBehavior>();
+        player = FindObjectOfType<Playermovement>();
     }
 
     // Update is called once per frame
@@ -46,14 +52,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-
-        /*
-        foreach(string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-        */
-       
     }
 
     public void DisplayNextSentence()
@@ -89,7 +87,10 @@ public class DialogueManager : MonoBehaviour
         
         animator.SetBool("IsOpen", false);
         var on = FindObjectOfType<Onion>();
-        on.GetComponent<SpriteRenderer>().color = Color.red;
-        on.BeginAttack();   
+        
+        if (Vector2.Distance(on.transform.position,player. transform.position) < 3)  
+            on.BeginAttack();   
+        if (Vector2.Distance(on.transform.position,player. transform.position) < 3)  
+            dog.BeginAttack();   
     }
 }

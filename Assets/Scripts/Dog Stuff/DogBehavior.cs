@@ -108,6 +108,10 @@ public class DogBehavior : MonoBehaviour
         }
     }
 
+    public void BeginAttack()
+    {
+        _phase++;
+    }
 
 }
 
