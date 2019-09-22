@@ -12,7 +12,7 @@ public class DogBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _phase = 2;
+        _phase = 1;
 
         StartCoroutine(BeakerBurst(.5f));
         StartCoroutine(Bork());
@@ -24,9 +24,14 @@ public class DogBehavior : MonoBehaviour
     {
         if (_phase == 1)
         {
-        } else if (_phase == 2)
-        {
-
+            Health h = gameObject.GetComponent<Health>();
+            if (h != null)
+            {
+                if (h.Value <= 50)
+                {
+                    _phase = 2;
+                }
+            }
         }
 
     }

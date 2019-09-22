@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1857789005687402684}
   - component: {fileID: 4979187570741441403}
   m_Layer: 10
-  m_Name: EnemyBullet
+  m_Name: Beaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3343874537880452436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 556ab84b4fdf3ac4dade8526bfd4ff0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acc8dfba030fed641b61dfb691007f1b, type: 3}
   m_Color: {r: 0.56078434, g: 0.56078434, b: 0.56078434, a: 1}
   m_FlipX: 0
   m_FlipY: 0

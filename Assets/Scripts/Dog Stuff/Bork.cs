@@ -31,6 +31,8 @@ public class Bork : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject target = collision.gameObject;
+        // Playermovement p = target.GetComponent<Playermovement>();
+        // Debug.Log(p.Speed);
         /*Velocity hit = target.GetComponent<Health>();
         if (hit != null)
         {
